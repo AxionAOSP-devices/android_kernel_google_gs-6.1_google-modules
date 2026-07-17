@@ -18,6 +18,11 @@ filegroup(
 label_flag(
     name = "gs_soc_module",
     build_setting_default = ":gs_undefined",
+    visibility = [
+        "@axion_modules//:__pkg__",
+        "//private/devices/google:__subpackages__",
+        "//private/google-modules:__subpackages__",
+    ],
 )
 
 filegroup(
@@ -80,6 +85,7 @@ filegroup(
     ]),
     visibility = [
         # keep sorted
+        "@axion_modules//:__pkg__",
         "//private/devices/google:__subpackages__",
         "//private/google-modules:__subpackages__",
     ],
